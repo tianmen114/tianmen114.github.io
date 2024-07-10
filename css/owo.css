@@ -1,0 +1,52 @@
+@media screen and (max-width: 768px) {
+  .tk-comment .tk-owo-emotion[alt*=ikun], .tk-comment .tk-owo-emotion[alt*=menhera], .tk-comment .vemoji[alt|=ikun], .tk-comment .vemoji[alt|=menhera] {
+      max-width: calc(100% - 30px) !important;
+      max-height: calc(100% - 30px) !important;
+  }
+}
+
+.tk-comment .tk-owo-emotion[alt*=menhera], .tk-comment .vemoji[alt|=menhera] {
+  max-width: 240px !important;
+  max-height: 240px !important;
+}
+
+.tk-comment .tk-owo-emotion[alt*=ikun], .tk-comment .tk-owo-emotion[alt*=menhera], .tk-comment .vemoji[alt|=ikun], .tk-comment .vemoji[alt|=menhera] {
+  margin: 8px 1px;
+  display: block !important;
+  border-radius: 6px;
+}
+
+.tk-comment .tk-owo-emotion[alt*=menhera] {
+  width: 240px !important;
+}
+
+.tk-content img {
+  max-width: 300px;
+  max-height: 300px;
+  vertical-align: middle;
+}
+
+
+.OwO .OwO-body .OwO-items-image .OwO-item img {
+  max-width: 200% !important;
+}
+
+
+.tk-owo-emotion, .twikoo .OwO-item img {
+  width: 33em !important;
+  height: auto;
+}
+
+
+.tk-content img {
+  max-width: 300px;
+  max-height: 300px;
+  vertical-align: middle;
+}
+
+
+.tk-owo-emotion, .twikoo .OwO-item img {
+  width: 3em !important;
+  height: auto !important;
+}
+
