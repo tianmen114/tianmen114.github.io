@@ -606,32 +606,36 @@ body::-webkit-scrollbar {
 }
 
 
-/* source/css/styles.css */
-
-/* 提示框样式 */
-.toast {
+ /* 表情变大 */
+#owo-big {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 5px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s, transform 0.3s;
-  z-index: 1000;
-  font-size: 14px;
-  line-height: 1.5;
-  max-width: 300px;
-}
-.toast.show {
-  opacity: 1;
-  transform: translateY(0);
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px #aaa solid;
+  border-radius: 10px;
+  z-index: 9999;
+  display: none;
+  transform: translate(0, -105%);
+  overflow: hidden;
+  animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
 }
 
-/* 自定义提示框文字样式 */
-.toast p {
-  margin: 0;
+[data-theme=dark] #owo-big {
+  background-color: #4a4a4a
 }
 
+#owo-big img {
+  width: 100%;
+}
+
+/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */
+@keyframes owoIn {
+  0% {
+      transform: translate(0, -95%);
+      opacity: 0;
+  }
+  100% {
+      transform: translate(0, -105%);
+      opacity: 1;
+  }
+}
