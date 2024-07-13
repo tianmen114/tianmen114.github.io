@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>骚话展示</title>
+      <link href="/2024/07/13/saohua/"/>
+      <url>/2024/07/13/saohua/</url>
+      
+        <content type="html"><![CDATA[<p><span style="color: red;">这是一个骚话展示。</span></p><style>/* 响应式设计样式 */#textContainer {  position: relative;  text-align: center;  margin-top: 20px;  padding: 20px;  border: 1px solid #007bff;  border-radius: 5px;  background-color: #f8f9fa;  font-size: 1.2em;  color: #333;}.controlButtons {  display: flex;  justify-content: center;  align-items: center;  margin-top: 20px;  flex-wrap: wrap;}.controlButtons button {  margin: 10px; /* 按钮间距 */  background-color: #007bff;  color: #fff;  padding: 10px 20px;  border: none;  cursor: pointer;  border-radius: 5px;}.controlButtons button:hover {  background-color: #0056b3;}</style><!-- 文本容器 --><div id="textContainer" class="center">点击下方按钮获取骚话</div><!-- 控制按钮 --><div class="controlButtons">  <button id="fetchButton">获取新文字</button>  <button onclick="setApi('https://v.api.aa1.cn/api/api-saohua/index.php?type=json')">API1</button>  <button onclick="setApi('https://another.api.endpoint')">API2</button>  <!-- 你可以在这里添加更多的API按钮 --></div><script>// 获取需要操作的元素const textContainer = document.getElementById('textContainer');const fetchButton = document.getElementById('fetchButton');let apiUrl = 'https://v.api.aa1.cn/api/api-saohua/index.php?type=json'; // 默认API地址// 从API获取文字function fetchText() {  fetch(apiUrl)    .then(response => response.json())    .then(data => {      if (data && data.saohua) {        textContainer.textContent = data.saohua;      } else {        textContainer.textContent = '无法获取骚话，请稍后再试。';      }    })    .catch(error => {      console.error('Error fetching text:', error);      textContainer.textContent = '获取文字时出错，请稍后再试。';    });}// 设置新的API地址function setApi(newApiUrl) {  apiUrl = newApiUrl;  textContainer.textContent = `API 已设置为: ${newApiUrl}`;}// 按钮点击事件fetchButton.addEventListener('click', fetchText);</script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2024/07/11/hello-world/"/>
       <url>/2024/07/11/hello-world/</url>
@@ -49,19 +62,6 @@
             <tag> 标签 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>骚话展示</title>
-      <link href="/2024/07/10/saohua/"/>
-      <url>/2024/07/10/saohua/</url>
-      
-        <content type="html"><![CDATA[<p><span style="color: red;">这是一个骚话展示。</span></p><style>/* 响应式设计样式 */#textContainer {  position: relative;  text-align: center;  margin-top: 20px;  padding: 20px;  border: 1px solid #007bff;  border-radius: 5px;  background-color: #f8f9fa;  font-size: 1.2em;  color: #333;}.controlButtons {  display: flex;  justify-content: center;  align-items: center;  margin-top: 20px;  flex-wrap: wrap;}.controlButtons button {  margin: 10px; /* 按钮间距 */  background-color: #007bff;  color: #fff;  padding: 10px 20px;  border: none;  cursor: pointer;  border-radius: 5px;}.controlButtons button:hover {  background-color: #0056b3;}</style><!-- 文本容器 --><div id="textContainer" class="center">点击下方按钮获取骚话</div><!-- 控制按钮 --><div class="controlButtons">  <button id="fetchButton">获取新文字</button>  <button onclick="setApi('https://v.api.aa1.cn/api/api-saohua/index.php?type=json')">API1</button>  <button onclick="setApi('https://another.api.endpoint')">API2</button>  <!-- 你可以在这里添加更多的API按钮 --></div><script>// 获取需要操作的元素const textContainer = document.getElementById('textContainer');const fetchButton = document.getElementById('fetchButton');let apiUrl = 'https://v.api.aa1.cn/api/api-saohua/index.php?type=json'; // 默认API地址// 从API获取文字function fetchText() {  fetch(apiUrl)    .then(response => response.json())    .then(data => {      if (data && data.saohua) {        textContainer.textContent = data.saohua;      } else {        textContainer.textContent = '无法获取骚话，请稍后再试。';      }    })    .catch(error => {      console.error('Error fetching text:', error);      textContainer.textContent = '获取文字时出错，请稍后再试。';    });}// 设置新的API地址function setApi(newApiUrl) {  apiUrl = newApiUrl;  textContainer.textContent = `API 已设置为: ${newApiUrl}`;}// 按钮点击事件fetchButton.addEventListener('click', fetchText);</script>]]></content>
-      
-      
       
     </entry>
     

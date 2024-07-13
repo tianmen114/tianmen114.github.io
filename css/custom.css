@@ -270,7 +270,7 @@ font-display: block;
   display: flex !important;
 }
 /* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
-.menus_items .menus_item:nth-child(3) .menus_item_child {
+.menus_items .menus_item:nth-child(5) .menus_item_child {
   left: -50px;
 }
 
@@ -537,7 +537,7 @@ body::-webkit-scrollbar {
   }
 
   ::-webkit-scrollbar-thumb {
-      background-color: rgb(255 255 255 / .3);
+      background-color: rgba(52, 215, 220, 0.3);
       background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
       border-radius: 2em
   }
@@ -911,4 +911,56 @@ h6::before {
 #aside-content > .card-widget.card-info > #card-info-btn {
   background-color: #3eb8be;
   border-radius: 8px;
+}
+
+
+#bilibili-hot-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px; /* 雪花宽度 */
+  height: 10px; /* 雪花高度 */
+  background-color: #fff; /* 雪花颜色 */
+  border-radius: 50%; /* 雪花为圆形 */
+  pointer-events: none; /* 雪花不响应鼠标事件 */
+  animation: snowflake-fall 1s linear; /* 雪花消失动画 */
+}
+
+@keyframes snowflake-fall {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(50px); /* 雪花下落的距离 */
+  }
+}
+
+
+.word-effect {
+  position: absolute;
+  font-size: 20px; /* 文字大小 */
+  font-weight: bold; /* 文字加粗 */
+  pointer-events: none; /* 文字不响应鼠标事件 */
+  animation: word-fade 1s linear; /* 文字消失动画 */
+}
+
+@keyframes word-fade {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-50px); /* 文字上升的距离 */
+  }
 }
