@@ -964,3 +964,27 @@ h6::before {
       transform: translateY(-50px); /* 文字上升的距离 */
   }
 }
+#custom-video-window {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#custom-video-window video {
+  flex-grow: 1;
+}
+
+#custom-video-window button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
+
+#custom-video-window button:hover {
+  background: #0056b3;
+}
+
